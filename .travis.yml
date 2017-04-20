@@ -8,7 +8,7 @@ php:
 addons:
   browserstack:
     username: vaishali52
-    access_key: p2VznPYzcHbdmsRXXV94
+    access_key: z8cLxfUqIPpWKMXN4kBOK0RNjLX4oRtUtTa+nKmiVnKAg0TUJNkcJ33eM+b1No9ndkIR/sG/w5kR7cqtfIcTINy7dixTZWN5NLB2AWq1Tmob3K2Own/n9tpoRlJaNt0aq/UG2xrOlGpLQYufcAoPbt64T1XXrh0xOhZRj3iwgu9dRqHBIORACZmrXh1KxcaQG+B/rRstYTg9Ay8AeZvQ7K/CbDe5SrZjIcKYOapJAdCCbBDGqnBmzmPBllpQWVeOiPI/gRYdELM+Fh0N1XLidsw8y9R1A1a5Gz7V7c1Kv7Orec61s0u7mbFf2grXvW2xqH6Z6EADiS4KH4wpDfPLsN4eR9HZrKra4l8a/t8jmGSM7HWHfzEoHN7A4W4VFCdAos8hNB9Q6U2U+RXdGSBrDyO2BcLTrPALItYyrhaKXCyogBd+s4EOzvaG8KrdvQBLh6/Jq5WO9AtOLzwxtkOR5lqtmznm885gBlfyxTsj8XMQQlXO9fxeka0LS6wLqBTsWBsrMUMvfR4hKPZu82ZGSAF7WJu9bPVarEbFpn1uBbqQthPWVAjrDzmKN4txw3DZtHwvXXUaZAlFVdcEuRUoQteb2Lv9xvearvFCvcWyGA+gRh3h0jmowLs9mVUgFOzIr010kV9vojYP0VyCM+F8laZHlBgl5LRpIan19X3yINo=
 
 before_install:
 - rm -rf ~/.gnupg
@@ -36,6 +36,7 @@ before_script:
 - cd /tmp
 - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
 - unzip BrowserStackLocal-linux-x64.zip
+- echo $BROWSERSTACK_ACCESS_KEY
 # - sudo apt-get install unzip && unzip BrowserStackLocal-linux-x64.zip
 - nohup ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY &
 - cd $PLUGIN_DIR

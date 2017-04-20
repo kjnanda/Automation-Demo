@@ -20,7 +20,7 @@ modules:
             adminPath: ''
             capabilities:
               'browserstack.user': 'vaishali52'
-              'browserstack.key': 'p2VznPYzcHbdmsRXXV94'
+              'browserstack.key': '%BROWSERSTACK_ACCESS_KEY%'
               'os': 'OS X'
               'os_version': 'sierra'
               'browserstack.debug': 'true'
