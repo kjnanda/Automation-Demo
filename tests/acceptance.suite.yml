@@ -8,20 +8,19 @@ class_name: AcceptanceTester
 modules:
     enabled:
         - \Helper\Acceptance
-        - WPDb
-        - WPBrowser
+        - WPWebDriver
     config:
-        WPDb:
-            dsn: 'mysql:host=localhost;dbname=database'
-            user: root
-            password: 
-            dump: tests/_data/dump.sql
-            populate: true
-            cleanup: true
-            url: 'http://wp.dev'
-            tablePrefix: wp_
-        WPBrowser:
-            url: 'http://wp.dev'
-            adminUsername: admin
-            adminPassword: password
-            adminPath: /wp-admin
+        WPWebDriver:
+            host: 'hub-cloud.browserstack.com'
+            port: 80
+            browser: 'firefox'
+            url: 'http://krupa.rtcamp.info/'
+            adminUsername: ''
+            adminPassword: ''
+            adminPath: ''
+            capabilities:
+              'browserstack.user': ''
+              'browserstack.key': ''
+              'os': 'OS X'
+              'os_version': 'sierra'
+              'browserstack.debug': 'true'
