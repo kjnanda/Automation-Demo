@@ -33,13 +33,13 @@ before_script:
 - cd /var/www/wp.test.me/htdocs/
 - wp --allow-root plugin install https://downloads.wordpress.org/plugin/buddypress.2.8.2.zip
 - wp plugin activate --all
-- cd $PLUGIN_DIR
-- cd /tmp
-- wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
-- unzip BrowserStackLocal-linux-x64.zip
-- echo $BROWSERSTACK_ACCESS_KEY
+# - cd $PLUGIN_DIR
+# - cd /tmp
+# - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
+# - unzip BrowserStackLocal-linux-x64.zip
+# - echo $BROWSERSTACK_ACCESS_KEY
 # - sudo apt-get install unzip && unzip BrowserStackLocal-linux-x64.zip
-- nohup ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY &
+# - nohup ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY &
 - cd $PLUGIN_DIR
 - composer install
 - export PATH="$PATH:/home/travis/build/kjnanda/Automation-demo/vendor/bin"
