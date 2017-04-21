@@ -24,6 +24,6 @@ modules:
               'os': 'OS X'
               'os_version': 'sierra'
               'browserstack.debug': 'true'
-              'build': 'Build_01'
-              'project': 'Automated_01'
+              'build': '%TRAVIS_BUILD_ID%'
+              'project': 'PRJ_1'
               'browserstack.local': 'true'
